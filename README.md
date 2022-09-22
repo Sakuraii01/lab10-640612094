@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Lab 10 : Public Chat Room API
 
-## Getting Started
+ให้นักศึกษาสร้าง Backend API เพื่อใช้สำหรับห้องแชทสาธารณะโดยใช้เฟรมเวิร์ค NextJS ซึ่งมีความต้องการดังนี้
 
-First, run the development server:
+https://o365cmu-my.sharepoint.com/:b:/g/personal/chayanin_s_cmu_ac_th1/EUYsQL2b37FLvsBZyu5CuCcBlim0ZYnDy7Hw-4ZuJ7MVAw?e=PIe3IG
+
+WARNING
+ก่อนทำงานให้ Fork Repository นี้ไปไว้ใน GitHub Account ของตนเองก่อน แล้วให้น.ศ. ทำงานจาก Repo นั้น
+
+หลังจากที่ clone repository แล้ว ให้เข้าไปในโฟลเดอร์และรันคำสั่ง
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & Deployment
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ดูรายละเอียดการ Deploy ได้ใน **Slide-14-RESTful-API-part1-extras** จากนั้นให้กรอก URL ที่ได้จากการ Deploy ไว้ใน spreadsheet (link coming soon…)

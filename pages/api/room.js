@@ -10,7 +10,7 @@ export default function roomRoute(req, res) {
   //     roomName: room.roomName,
   //   });
   // }
-  const result = room.map((x) => ({
+  const result = rooms.map((x) => ({
     roomId: x.roomId,
     roomName: x.roomName,
   }));

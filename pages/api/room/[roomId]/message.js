@@ -19,11 +19,29 @@ export default function roomIdMessageRoute(req, res) {
 
   } else if (req.method === "POST") {
     const rooms = readDB();
-
+    
     //read request body
     const text = req.body.text;
 
     //create new id
     const newId = uuidv4();
+    const id = req.query.roomId;
+    const roomsIdx = rooms.findIndex((x) => x.roomId === id);
+    const newMessage = {
+      messageId: newId,
+      text: text
+    };
+
+    if(roomsIdx === -1){
+      res.status(400).json({ ok: false , message: "Invalid room id "})
+    }else{
+      if(typeof text !== "string" || text === null){
+        res.status(400).json({ ok: false , message: "Invalid input" })
+      }else{
+        rooms[roomsIdx].messages.push(newMessage);
+        writeDB(rooms);
+        res.status(200).json({ ok: true , message: newMessage })
+      };
+    }
   }
 }

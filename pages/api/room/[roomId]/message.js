@@ -8,6 +8,8 @@ export default function roomIdMessageRoute(req, res) {
         messages = x.messages;
     })
 
+    return res.json({ ok: true , message: result });
+
   } else if (req.method === "POST") {
     const rooms = readDB();
 

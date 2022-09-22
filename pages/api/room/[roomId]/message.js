@@ -4,6 +4,10 @@ import { v4 as uuidv4 } from "uuid";
 export default function roomIdMessageRoute(req, res) {
   if (req.method === "GET") {
     const rooms = readDB();
+    const result = rooms.map((x) => {
+        messages = x.messages;
+    })
+
   } else if (req.method === "POST") {
     const rooms = readDB();
 

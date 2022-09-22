@@ -11,8 +11,8 @@ export default function roomIdMessageRoute(req, res) {
     const id = req.query.roomId;
     const roomsIdx = rooms.findIndex((x) => x.roomId === id);
 
-    if(roomsIdx){
-      res.status(404).json({ ok: false , message: "Invaldi room id"});
+    if(roomsIdx === -1){
+      res.status(404).json({ ok: false , message: "Invalid room id"});
     }else{
       res.status(200).json({ ok: true , message: rooms[roomsIdx].messages });
     }
@@ -33,10 +33,10 @@ export default function roomIdMessageRoute(req, res) {
     };
 
     if(roomsIdx === -1){
-      res.status(400).json({ ok: false , message: "Invalid room id "})
+      res.status(404).json({ ok: false , message: "Invalid room id "})
     }else{
       if(typeof text !== "string" || text === null){
-        res.status(400).json({ ok: false , message: "Invalid input" })
+        res.status(404).json({ ok: false , message: "Invalid input" })
       }else{
         rooms[roomsIdx].messages.push(newMessage);
         writeDB(rooms);
